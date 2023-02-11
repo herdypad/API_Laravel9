@@ -43,7 +43,7 @@ class AuthController extends Controller
         // semua data di $post akan dijadiakan
 
 
-        // koda dibawah ini berhasil generat JWT token dan belum berhasil jika mengunakan data dari $Post
+        // kode dibawah ini berhasil generat JWT token dan belum berhasil jika mengunakan data dari $Post
 
         $credentials = $request->only('email','password');
 
@@ -59,6 +59,7 @@ class AuthController extends Controller
         }
 
         $user = Auth::user();
+
         return response()->json([
                 'status' => 'success',
                 'user' => $user,
